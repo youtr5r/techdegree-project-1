@@ -54,3 +54,14 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 
 
 // Remember to delete the comments that came with this file, and replace them with your own code comments.
+
+var quotes = [
+  {
+    quotes: "Faith is taking the first step even when you can't see the whole staircase.",
+    source: "Martin Luther King Jr. ",
+    citation: "www.goodreads.com",
+    year: 2019
+  },
+  
+];
+console.log(quotes);
