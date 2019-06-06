@@ -33,9 +33,14 @@ var quotes = [
     source: "A.A. Milne, Winnie-the-Pooh",
     citation: "https://theweekendfox.com/9-quotes-from-christopher-robin-that-are-good-for-the-soul/",
     year: '2018'
+  },
+  {
+    quote: "Try not to become a person of success but rather a person of value. ",
+    source: "Albert Einstein",
+    // commented out citation and year to include 'if' statement
+     
   }
 ];
-
 
 
 /***
@@ -44,9 +49,23 @@ var quotes = [
    - return quotes array
 ***/
 function getRandomQuote(array) {
-var quoteGenerator = Math.floor( Math.random() * (quotes.length));
+var quoteGenerator = Math.floor(Math.random() * quotes.length);
 return quotes[quoteGenerator];
 }
+
+console.log (getRandomQuote());
+
+function ranColor(){
+  var a = Math.floor(Math.random() * 255);
+  var b = Math.floor(Math.random() * 255);
+  var c = Math.floor(Math.random() * 255);
+  var bgColor = "rgb(" + a + "," + b + "," + c + ")";
+  console.log(bgColor);
+   
+     document.body.style.background = bgColor;
+     }
+ 
+ ranColor();
 
 //function expression in var result
 function printQuote() {
@@ -54,17 +73,26 @@ var message = "";
 var result = getRandomQuote(quotes);
 message = "<p class='quote'>" + result.quote +"</p>";
 message += "<p class='source'>" + result.source;
-message += "<span class='citation'>" + result.citation + "</span>";
-message += "<span class='year'>" + result.year + "</span>"
+if (result.citation){
+  message += "<span class='citation'>" + result.citation + "</span>"
+}
+if (result.year) {
+  message += "<span class='year'>" + result.year + "</span>"
+}
 message += "</p>";
+
+console.log (message);
 
 document.getElementById('quote-box').innerHTML = message;
 //quote-box is element ID located in the css file
 }
 
+//add eventlistner for random color function
+document.getElementById('loadQuote').addEventListener("click", ranColor, false);
 
+//loadQuote is the button ID
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-document.getElementById('startQuote').addEventListner("click", printQuote, false);
+
 
 
 
