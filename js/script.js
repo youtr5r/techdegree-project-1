@@ -96,7 +96,7 @@ document.getElementById('quote-box').innerHTML = message;
 setInterval(function(){ printQuote(); }, 25000);
 function specialThanks(){
   var thanks = "";
-  thanks = alert("Thank You Team TreeHouse");
+  thanks = alert("Thank You Aneesah, Bill, Jennifer, Nate, Reggie");
 }
 //add eventlistner for random color function
 document.getElementById('loadQuote').addEventListener("click", ranColor, false);
