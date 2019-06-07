@@ -75,7 +75,7 @@ body {
   position: fixed;
   width: 12em;
   display: inline-block;
-  left: 50%;
+  left: 60%;
   margin-left: -6em;
   bottom: 150px;
   border-radius: 25px;
@@ -90,6 +90,28 @@ body {
 }
 
 #loadQuote:focus {
+  outline: none;
+}
+
+#newQuote {
+  position: fixed;
+  width: 12em;
+  display: inline-block;
+  left: 40%;
+  margin-left: -6em;
+  bottom: 150px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: #000000;
+  padding: 15px 0;
+  transition: .5s ;
+}
+#newQuote:hover {
+  background-color: rgba(255,255,255,.25);
+}
+
+#newQuote:focus {
   outline: none;
 }
 

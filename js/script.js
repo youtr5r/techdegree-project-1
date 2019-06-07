@@ -20,7 +20,8 @@ var quotes = [
     quote: "Change takes courage.",
     source: "Alexandria Ocasio-Cortez",
     citation: "www.brainyquote.com",
-    year: '2018'
+    year: '2018',
+    description: " American politician, U.S. Representative for New York's 14th congressional district."
   },
   {
     quote: "If you just work on stuff that you like and you’re passionate about, you don’t have to have a master plan with how things will play out.",
@@ -79,19 +80,32 @@ if (result.citation){
 if (result.year) {
   message += "<span class='year'>" + result.year + "</span>"
 }
+if (result.description) {
+  message += "<span class='description'>" + result.description + "</span>"
+}
 message += "</p>";
 
 console.log (message);
+
+
 
 document.getElementById('quote-box').innerHTML = message;
 //quote-box is element ID located in the css file
 }
 
+setInterval(function(){ printQuote(); }, 25000);
+function specialThanks(){
+  var thanks = "";
+  thanks = alert("Thank You Team TreeHouse");
+}
 //add eventlistner for random color function
 document.getElementById('loadQuote').addEventListener("click", ranColor, false);
 
 //loadQuote is the button ID
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+document.getElementById('newQuote').addEventListener("click", specialThanks, false);
+
 
 
 
